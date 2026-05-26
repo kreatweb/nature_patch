@@ -182,21 +182,25 @@ function ActivitiesSection() {
         <p className="mt-3 text-sm text-muted-foreground">Six days of doing. Zero days of scrolling.</p>
       </header>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-        {ACTIVITIES.map((a) => (
-          <div
-            key={a.title}
-            className="reveal lift glass relative overflow-hidden rounded-2xl p-6 shadow-card"
-          >
-            <div className="mb-3 text-4xl">{a.icon}</div>
-            <h3 className="mb-1 text-lg text-foreground">{a.title}</h3>
-            <p className="text-xs text-muted-foreground">{a.desc}</p>
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-6 -bottom-6 h-24 w-24 rounded-full opacity-20"
-              style={{ background: "var(--gradient-ember)" }}
-            />
-          </div>
-        ))}
+        {ACTIVITIES.map((a) => {
+          const Tag = (a.href ? "a" : "div") as "a" | "div";
+          return (
+            <Tag
+              key={a.title}
+              {...(a.href ? { href: a.href, target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="reveal lift glass relative block overflow-hidden rounded-2xl p-6 shadow-card"
+            >
+              <div className="mb-3 text-4xl">{a.icon}</div>
+              <h3 className="mb-1 text-lg text-foreground">{a.title}</h3>
+              <p className="text-xs text-muted-foreground">{a.desc}</p>
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-6 -bottom-6 h-24 w-24 rounded-full opacity-20"
+                style={{ background: "var(--gradient-ember)" }}
+              />
+            </Tag>
+          );
+        })}
       </div>
     </section>
   );
