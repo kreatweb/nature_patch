@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
@@ -6,37 +5,10 @@ import { VineDivider } from "@/components/VineDivider";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { useReveal } from "@/hooks/useReveal";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Jungle Juniors — Where Kids Go Wild" },
-      {
-        name: "description",
-        content:
-          "A nature-immersive summer camp for ages 7–15. 3 days, 30 kids, 100% outdoors. No screens. No parents. No limits.",
-      },
-      { property: "og:title", content: "Jungle Juniors — Where Kids Go Wild" },
-      {
-        property: "og:description",
-        content: "A nature-immersive camp experience unlike anything else.",
-      },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600;700&display=swap",
-      },
-    ],
-  }),
-  component: Index,
-});
-
 const HERO_IMG =
   "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2000&q=80";
 
-function Index() {
+export default function Index() {
   useReveal();
   const [scrollY, setScrollY] = useState(0);
 
@@ -82,7 +54,6 @@ function Hero({ scrollY }: { scrollY: number }) {
       />
       <Fireflies count={22} />
 
-      {/* Sun glow */}
       <div
         aria-hidden
         className="sun-glow absolute right-[-80px] top-[-60px] h-72 w-72 rounded-full"
@@ -92,7 +63,6 @@ function Hero({ scrollY }: { scrollY: number }) {
         }}
       />
 
-      {/* Animal silhouettes */}
       <span aria-hidden className="absolute left-6 top-24 text-3xl opacity-30">🦋</span>
       <span aria-hidden className="absolute right-10 bottom-32 text-4xl opacity-25">🦌</span>
       <span aria-hidden className="absolute left-1/3 bottom-16 text-2xl opacity-30">🐦</span>
@@ -105,8 +75,7 @@ function Hero({ scrollY }: { scrollY: number }) {
           Jungle Juniors • Est. Wild
         </p>
         <h1 className="text-5xl leading-[1.05] text-foreground md:text-7xl">
-          Where Kids{" "}
-          <span className="text-gradient-ember italic">Go Wild</span>
+          Where Kids <span className="text-gradient-ember italic">Go Wild</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground md:text-lg">
           A nature-immersive camp experience unlike anything else.
@@ -150,10 +119,7 @@ function WhatSection() {
       </header>
       <div className="grid gap-6 md:grid-cols-3">
         {WHAT.map((w) => (
-          <div
-            key={w.title}
-            className="reveal lift glass rounded-2xl p-8 text-center shadow-card"
-          >
+          <div key={w.title} className="reveal lift glass rounded-2xl p-8 text-center shadow-card">
             <div className="mb-4 text-5xl">{w.icon}</div>
             <h3 className="mb-2 text-2xl text-[color:var(--gold)]">{w.title}</h3>
             <p className="text-sm text-muted-foreground">{w.line}</p>
@@ -219,10 +185,7 @@ function WhoSection() {
           { icon: "👦", label: "30 Kids Max" },
           { icon: "🌿", label: "100% Outdoors" },
         ].map((s) => (
-          <div
-            key={s.label}
-            className="glass flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium"
-          >
+          <div key={s.label} className="glass flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium">
             <span className="text-xl">{s.icon}</span>
             <span>{s.label}</span>
           </div>
@@ -236,9 +199,7 @@ function RegisterSection() {
   return (
     <section id="register" className="relative mx-auto max-w-3xl px-6 py-24 text-center">
       <Fireflies count={10} />
-      <p className="reveal text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">
-        Limited Spots
-      </p>
+      <p className="reveal text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">Limited Spots</p>
       <h2 className="reveal mt-4 text-4xl md:text-5xl">Spots fill fast.</h2>
       <p className="reveal mt-2 text-lg text-muted-foreground">Secure yours today.</p>
       <a
@@ -253,10 +214,7 @@ function RegisterSection() {
 
 function WhatsAppStrip() {
   return (
-    <section
-      className="relative overflow-hidden px-6 py-16 text-center"
-      style={{ background: "var(--gradient-ember)" }}
-    >
+    <section className="relative overflow-hidden px-6 py-16 text-center" style={{ background: "var(--gradient-ember)" }}>
       <h2 className="text-3xl text-[color:var(--ember-foreground)] md:text-4xl">
         Got questions? We're one message away.
       </h2>
@@ -279,12 +237,7 @@ function Footer() {
       <p className="mt-2 text-sm text-muted-foreground">Where kids go wild.</p>
       <p className="mt-4 text-xs text-muted-foreground">
         WhatsApp:{" "}
-        <a
-          href="https://wa.me/919741698468"
-          className="underline-offset-4 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://wa.me/919741698468" className="underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">
           +91 97416 98468
         </a>
       </p>
