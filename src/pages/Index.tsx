@@ -42,6 +42,7 @@ export default function Index() {
       <VineDivider />
       <RegisterSection />
       <WhatsAppStrip />
+      <LocationSection />
       <Footer />
     </main>
   );
