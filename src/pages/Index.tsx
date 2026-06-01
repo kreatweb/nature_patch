@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Instagram } from "lucide-react";
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
 import { VineDivider } from "@/components/VineDivider";
@@ -299,8 +300,9 @@ function Footer() {
           href={INSTAGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
         >
+          <Instagram className="h-4 w-4" aria-hidden="true" />
           @naturepatch.blr
         </a>
         <a
