@@ -260,6 +260,47 @@ function WhatsAppStrip() {
   );
 }
 
+
+const DIRECTIONS_URL =
+  "https://www.google.com/maps/place/Nisarga+Resort/@12.8202893,77.5037867,17z/data=!4m9!3m8!1s0x3bae41f53050d0df:0xa9ab75430e343593!5m2!4m1!1i2!8m2!3d12.8202893!4d77.5063616!16s%2Fg%2F11rn_kd2jg?entry=tts";
+
+function LocationSection() {
+  return (
+    <section className="relative px-6 py-20">
+      <div className="reveal mx-auto max-w-3xl text-center">
+        <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">
+          📍 Where It All Happens
+        </p>
+        <h2 className="mt-4 text-4xl md:text-5xl text-[color:var(--gold)]">
+          Nestled in Nature. Built for Adventure.
+        </h2>
+        <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg text-foreground/85">
+          Nature Patch Camp takes place at Nisarga Resort — a stunning nature retreat
+          surrounded by greenery, open skies, and everything a wild adventure needs.
+        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={RESORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[color:var(--ember)] px-7 py-3 text-sm font-semibold text-[color:var(--ember-foreground)] shadow-glow transition hover:brightness-110"
+          >
+            🌐 Visit Resort Website
+          </a>
+          <a
+            href={DIRECTIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-[color:var(--gold)] px-7 py-3 text-sm font-semibold text-[color:var(--gold)] transition hover:bg-[color:var(--gold)] hover:text-[color:var(--primary-foreground)]"
+          >
+            📍 Get Directions
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="relative px-6 py-14 text-center">
