@@ -8,6 +8,14 @@ import { useReveal } from "@/hooks/useReveal";
 const HERO_IMG =
   "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2000&q=80";
 
+const REGISTER_URL = "https://forms.gle/TDTYhJtipXhXdcKL7";
+const WHATSAPP_1 = "919741698468";
+const WHATSAPP_2 = "917892301439";
+const EMAIL = "naturepatch7@gmail.com";
+const INSTAGRAM_URL = "https://instagram.com/naturepatch.blr";
+const RESORT_URL = "https://nisargaresort.com/";
+const RESORT_MAP_URL = "https://maps.app.goo.gl/THBhXjTzc1RnzyV38";
+
 export default function Index() {
   useReveal();
   const [scrollY, setScrollY] = useState(0);
@@ -72,23 +80,25 @@ function Hero({ scrollY }: { scrollY: number }) {
         style={{ transform: `translateY(${scrollY * -0.15}px)` }}
       >
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">
-          Jungle Juniors • Est. Wild
+          Nature Patch Camp • Est. Wild
         </p>
         <h1 className="text-5xl leading-[1.05] text-foreground md:text-7xl">
-          Where Kids <span className="text-gradient-ember italic">Go Wild</span>
+          Less Screen. <span className="text-gradient-ember italic">More Scream.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground md:text-lg">
           A nature-immersive camp experience unlike anything else.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#register"
+            href={REGISTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-pulse inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-ember)] px-8 py-4 text-sm font-semibold uppercase tracking-wider text-[color:var(--ember-foreground)] transition-transform hover:scale-105"
           >
-            Register Now
+            Reserve a Spot
           </a>
           <a
-            href="https://wa.me/919741698468"
+            href={`https://wa.me/${WHATSAPP_1}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/60 bg-background/20 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-foreground backdrop-blur transition-colors hover:bg-background/40"
@@ -115,7 +125,14 @@ function WhatSection() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 py-20">
       <header className="reveal mx-auto mb-14 max-w-2xl text-center">
-        <h2 className="text-4xl md:text-5xl">What is Jungle Juniors?</h2>
+        <h2 className="text-4xl md:text-5xl">What is Nature Patch Camp?</h2>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Hosted at{" "}
+          <a href={RESORT_URL} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline text-[color:var(--gold)]">
+            Nisarga Resort
+          </a>
+          .
+        </p>
       </header>
       <div className="grid gap-6 md:grid-cols-3">
         {WHAT.map((w) => (
@@ -132,11 +149,11 @@ function WhatSection() {
 
 type Activity = { icon: string; title: string; desc: string; href?: string };
 const ACTIVITIES: Activity[] = [
-  { icon: "🏕️", title: "Wild Camping", desc: "Sleep under starlit skies." },
-  { icon: "🧗", title: "Rock Climbing", desc: "Scale boulders, conquer fears." },
-  { icon: "🏹", title: "Archery", desc: "Aim true, breathe deep." },
-  { icon: "🌊", title: "River Rafting", desc: "Ride the rushing rapids." },
-  { icon: "🔥", title: "Campfire Tales", desc: "Stories, songs, sticky marshmallows." },
+  { icon: "🌱", title: "Nature Learning & Exploration", desc: "Discover the wild, up close." },
+  { icon: "🧭", title: "Outdoor Adventure", desc: "Trails, climbs, untamed thrills." },
+  { icon: "🔥", title: "Campfire & Pool Party", desc: "Splash by day, glow by night." },
+  { icon: "🤸", title: "Team Games & Fun Activities", desc: "Win together. Laugh louder." },
+  { icon: "🎨", title: "Eco-Art & DIY Workshop", desc: "Make magic from the forest." },
   { icon: "📜", title: "Read Full Itinerary", desc: "Every wild day, mapped out.", href: "/itinerary.pdf" },
 ];
 
@@ -145,7 +162,7 @@ function ActivitiesSection() {
     <section className="relative mx-auto max-w-6xl px-6 py-20">
       <header className="reveal mx-auto mb-14 max-w-2xl text-center">
         <h2 className="text-4xl md:text-5xl">What They'll Do</h2>
-        <p className="mt-3 text-sm text-muted-foreground">Six days of doing. Zero days of scrolling.</p>
+        <p className="mt-3 text-sm text-muted-foreground">Three days of doing. Zero days of scrolling.</p>
       </header>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
         {ACTIVITIES.map((a) => {
@@ -176,13 +193,12 @@ function WhoSection() {
   return (
     <section className="relative mx-auto max-w-4xl px-6 py-20 text-center">
       <h2 className="reveal text-3xl leading-tight md:text-5xl">
-        Ages 7–15.{" "}
+        Ages 8–13.{" "}
         <span className="text-gradient-ember">No screens. No parents. No limits.</span>
       </h2>
       <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
         {[
           { icon: "📅", label: "3 Days" },
-          { icon: "👦", label: "30 Kids Max" },
           { icon: "🌿", label: "100% Outdoors" },
         ].map((s) => (
           <div key={s.label} className="glass flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium">
@@ -203,7 +219,9 @@ function RegisterSection() {
       <h2 className="reveal mt-4 text-4xl md:text-5xl">Spots fill fast.</h2>
       <p className="reveal mt-2 text-lg text-muted-foreground">Secure yours today.</p>
       <a
-        href="#register"
+        href={REGISTER_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="reveal cta-pulse mt-10 inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-ember)] px-10 py-5 text-base font-semibold uppercase tracking-wider text-[color:var(--ember-foreground)] transition-transform hover:scale-105"
       >
         Reserve a Spot →
@@ -218,29 +236,101 @@ function WhatsAppStrip() {
       <h2 className="text-3xl text-[color:var(--ember-foreground)] md:text-4xl">
         Got questions? We're one message away.
       </h2>
-      <a
-        href="https://wa.me/919741698468"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-8 inline-flex items-center justify-center rounded-full bg-background px-8 py-4 text-sm font-semibold uppercase tracking-wider text-foreground transition-transform hover:scale-105"
-      >
-        Message on WhatsApp
-      </a>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={`https://wa.me/${WHATSAPP_1}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-background px-7 py-4 text-sm font-semibold uppercase tracking-wider text-foreground transition-transform hover:scale-105"
+        >
+          WhatsApp 97416 98468
+        </a>
+        <a
+          href={`https://wa.me/${WHATSAPP_2}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-background px-7 py-4 text-sm font-semibold uppercase tracking-wider text-foreground transition-transform hover:scale-105"
+        >
+          WhatsApp 78923 01439
+        </a>
+      </div>
     </section>
   );
 }
 
 function Footer() {
   return (
-    <footer className="relative px-6 py-12 text-center">
-      <h3 className="text-2xl text-[color:var(--gold)]">Jungle Juniors</h3>
-      <p className="mt-2 text-sm text-muted-foreground">Where kids go wild.</p>
-      <p className="mt-4 text-xs text-muted-foreground">
-        WhatsApp:{" "}
-        <a href="https://wa.me/919741698468" className="underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">
-          +91 97416 98468
+    <footer className="relative px-6 py-14 text-center">
+      <h3 className="text-2xl text-[color:var(--gold)]">Nature Patch Camp</h3>
+      <p className="mt-2 text-sm text-muted-foreground">Less Screen. More Scream.</p>
+
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={REGISTER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-ember)] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[color:var(--ember-foreground)] transition-transform hover:scale-105"
+        >
+          Reserve a Spot
         </a>
-      </p>
+        <a
+          href={`mailto:${EMAIL}`}
+          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+        >
+          Email Us
+        </a>
+        <a
+          href={`https://wa.me/${WHATSAPP_1}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+        >
+          WhatsApp 97416 98468
+        </a>
+        <a
+          href={`https://wa.me/${WHATSAPP_2}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+        >
+          WhatsApp 78923 01439
+        </a>
+        <a
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+        >
+          @naturepatch.blr
+        </a>
+        <a
+          href="/safety-guidelines.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
+        >
+          Read Safety Guidelines & Camp Rules
+        </a>
+      </div>
+
+      <div className="mt-8 space-y-2 text-xs text-muted-foreground">
+        <p>
+          Email:{" "}
+          <a href={`mailto:${EMAIL}`} className="underline-offset-4 hover:underline">
+            {EMAIL}
+          </a>
+        </p>
+        <p>
+          Resort:{" "}
+          <a href={RESORT_URL} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">
+            Nisarga Resort
+          </a>{" "}
+          •{" "}
+          <a href={RESORT_MAP_URL} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">
+            View Location
+          </a>
+        </p>
+      </div>
     </footer>
   );
 }
