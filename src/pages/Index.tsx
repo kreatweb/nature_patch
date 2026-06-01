@@ -196,7 +196,7 @@ function WhoSection() {
     <section className="relative mx-auto max-w-4xl px-6 py-20 text-center">
       <h2 className="reveal text-3xl leading-tight md:text-5xl">
         Ages 8–13.{" "}
-        <span className="text-gradient-ember">No screens. No parents. No limits.</span>
+        <span className="text-gradient-ember">100% safety. 100% transparency. 100% fun.</span>
       </h2>
       <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
         {[
