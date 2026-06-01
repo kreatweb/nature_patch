@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/jungle-juniors-adventure/",
+  base: "/jungle-juniors-adventure-0379628c/",
   plugins: [tsconfigPaths(), tailwindcss(), react()],
 });
