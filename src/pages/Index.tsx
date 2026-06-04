@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
+import brochureAsset from "@/assets/brochure.pdf.asset.json";
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
 import { VineDivider } from "@/components/VineDivider";
@@ -156,7 +157,7 @@ const ACTIVITIES: Activity[] = [
   { icon: "🔥", title: "Campfire & Pool Party", desc: "Splash by day, glow by night." },
   { icon: "🤸", title: "Team Games & Fun Activities", desc: "Win together. Laugh louder." },
   { icon: "🎨", title: "Eco-Art & DIY Workshop", desc: "Make magic from the forest." },
-  { icon: "📜", title: "Read Full Itinerary", desc: "Every wild day, mapped out.", href: "/itinerary.pdf" },
+  { icon: "📜", title: "View Full Brochure", desc: "Click me to see the full camp brochure.", href: brochureAsset.url },
 ];
 
 function ActivitiesSection() {
