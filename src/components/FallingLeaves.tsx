@@ -1,7 +1,7 @@
 const LEAVES = ["🍃", "🌿", "🍃", "🌱", "🍃", "🦋", "🌿", "🍂"];
 
 export function FallingLeaves() {
-  const leaves = Array.from({ length: 28 }, (_, i) => {
+  const leaves = Array.from({ length: 16 }, (_, i) => {
     const left = (i * 4.7) % 100;
     const duration = 9 + ((i * 2.3) % 12);
     const delay = (i * 0.9) % 14;

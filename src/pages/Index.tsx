@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
 import brochureAsset from "@/assets/brochure.pdf.asset.json";
+import logoAsset from "@/assets/nature-patch-logo.jpg.asset.json";
+import safetyAsset from "@/assets/safety-guidelines.pdf.asset.json";
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
 import { VineDivider } from "@/components/VineDivider";
