@@ -84,8 +84,9 @@ function Hero({ scrollY }: { scrollY: number }) {
         className="relative z-10 mx-auto max-w-3xl px-6 text-center"
         style={{ transform: `translateY(${scrollY * -0.15}px)` }}
       >
+        <img src={logoAsset.url} alt="Nature Patch Camp logo" className="mx-auto mb-6 h-28 w-28 rounded-full shadow-glow md:h-36 md:w-36" />
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">
-          Nature Patch Camp • Est. Wild
+          Nature Patch Camp
         </p>
         <h1 className="text-5xl leading-[1.05] text-foreground md:text-7xl">
           Less Screen. <span className="text-gradient-ember italic">More Scream.</span>
@@ -198,7 +199,7 @@ function WhoSection() {
   return (
     <section className="relative mx-auto max-w-4xl px-6 py-20 text-center">
       <h2 className="reveal text-3xl leading-tight md:text-5xl">
-        Ages 8–13.{" "}
+        Ages 7–13.{" "}
         <span className="text-gradient-ember">100% safety. 100% transparency. 100% fun.</span>
       </h2>
       <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
@@ -351,7 +352,7 @@ function Footer() {
           @naturepatch.blr
         </a>
         <a
-          href="/safety-guidelines.pdf"
+          href={safetyAsset.url}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
