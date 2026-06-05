@@ -266,6 +266,29 @@ function WhatsAppStrip() {
 }
 
 
+
+function BrochureSection() {
+  return (
+    <section className="relative px-6 py-20">
+      <div className="reveal mx-auto max-w-3xl glass rounded-3xl p-10 text-center shadow-card">
+        <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">📖 Full Details</p>
+        <h2 className="mt-4 text-4xl md:text-5xl">View Full Brochure</h2>
+        <p className="mx-auto mt-4 max-w-xl text-base text-muted-foreground">
+          Everything you need to know about Nature Patch Camp — activities, schedule, safety, and more.
+        </p>
+        <a
+          href={brochureAsset.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cta-pulse mt-8 inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-ember)] px-10 py-4 text-sm font-semibold uppercase tracking-wider text-[color:var(--ember-foreground)] transition-transform hover:scale-105"
+        >
+          📄 View Full Brochure
+        </a>
+      </div>
+    </section>
+  );
+}
+
 const DIRECTIONS_URL =
   "https://www.google.com/maps/place/Nisarga+Resort/@12.8202893,77.5037867,17z/data=!4m9!3m8!1s0x3bae41f53050d0df:0xa9ab75430e343593!5m2!4m1!1i2!8m2!3d12.8202893!4d77.5063616!16s%2Fg%2F11rn_kd2jg?entry=tts";
 
