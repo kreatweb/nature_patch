@@ -40,12 +40,12 @@ export default function Index() {
       <WhatSection />
       <VineDivider />
       <ActivitiesSection />
+      <BrochureSection />
       <VineDivider />
       <WhoSection />
       <VineDivider />
       <RegisterSection />
       <WhatsAppStrip />
-      <BrochureSection />
       <LocationSection />
       <Footer />
     </main>
