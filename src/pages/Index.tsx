@@ -45,6 +45,7 @@ export default function Index() {
       <VineDivider />
       <RegisterSection />
       <WhatsAppStrip />
+      <BrochureSection />
       <LocationSection />
       <Footer />
     </main>
