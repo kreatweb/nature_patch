@@ -160,7 +160,7 @@ const ACTIVITIES: Activity[] = [
   { icon: "🔥", title: "Campfire & Pool Party", desc: "Splash by day, glow by night." },
   { icon: "🤸", title: "Team Games & Fun Activities", desc: "Win together. Laugh louder." },
   { icon: "🎨", title: "Eco-Art & DIY Workshop", desc: "Make magic from the forest." },
-  { icon: "📜", title: "View Full Brochure", desc: "Click me to see the full camp brochure.", href: brochureAsset.url },
+  { icon: "⛺", title: "Camping", desc: "Tents under stars, stories by firelight." },
 ];
 
 function ActivitiesSection() {
