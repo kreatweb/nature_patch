@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
-const BROCHURE_URL = "/brochure.pdf";
+const BROCHURE_URL = `${import.meta.env.BASE_URL}brochure.pdf`;
 import logoAsset from "@/assets/nature-patch-logo.jpg.asset.json";
-const SAFETY_URL = "/safety-guidelines.pdf";
+const SAFETY_URL = `${import.meta.env.BASE_URL}safety-guidelines.pdf`;
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
 import { VineDivider } from "@/components/VineDivider";
