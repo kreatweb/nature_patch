@@ -376,7 +376,7 @@ function Footer() {
           @naturepatch.blr
         </a>
         <a
-          href={safetyAsset.url}
+          href={SAFETY_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
