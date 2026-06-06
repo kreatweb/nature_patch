@@ -85,7 +85,7 @@ function Hero({ scrollY }: { scrollY: number }) {
         className="relative z-10 mx-auto max-w-3xl px-6 text-center"
         style={{ transform: `translateY(${scrollY * -0.15}px)` }}
       >
-        <img src={logoAsset.url} alt="Nature Patch Camp logo" className="mx-auto mb-6 h-28 w-28 rounded-full shadow-glow md:h-36 md:w-36" />
+        <img src={LOGO_URL} alt="Nature Patch Camp logo" className="mx-auto mb-6 h-28 w-28 rounded-full shadow-glow md:h-36 md:w-36" />
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">
           Nature Patch Camp
         </p>
