@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
-import brochureAsset from "@/assets/brochure.pdf.asset.json";
+const BROCHURE_URL = "/brochure.pdf";
 import logoAsset from "@/assets/nature-patch-logo.jpg.asset.json";
 import safetyAsset from "@/assets/safety-guidelines.pdf.asset.json";
 import { FallingLeaves } from "@/components/FallingLeaves";
@@ -277,7 +277,7 @@ function BrochureSection() {
           Everything you need to know about Nature Patch Camp — activities, schedule, safety, and more.
         </p>
         <a
-          href={brochureAsset.url}
+          href={BROCHURE_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="cta-pulse mt-8 inline-flex items-center justify-center rounded-full bg-[image:var(--gradient-ember)] px-10 py-4 text-sm font-semibold uppercase tracking-wider text-[color:var(--ember-foreground)] transition-transform hover:scale-105"
