@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
 const BROCHURE_URL = "/brochure.pdf";
 import logoAsset from "@/assets/nature-patch-logo.jpg.asset.json";
-import safetyAsset from "@/assets/safety-guidelines.pdf.asset.json";
+const SAFETY_URL = "/safety-guidelines.pdf";
 import { FallingLeaves } from "@/components/FallingLeaves";
 import { Fireflies } from "@/components/Fireflies";
 import { VineDivider } from "@/components/VineDivider";
@@ -376,7 +376,7 @@ function Footer() {
           @naturepatch.blr
         </a>
         <a
-          href={safetyAsset.url}
+          href={SAFETY_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-full border border-[color:var(--gold)]/50 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-background/30"
