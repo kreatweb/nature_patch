@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "nature_patch",
+  base: "/nature_patch/",
   plugins: [tsconfigPaths(), tailwindcss(), react()],
 });
